@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<div class="panel panel-info">
   <div class="panel-heading">
     <h4>Patient Details :</h4>
   </div>
@@ -11,7 +11,7 @@
         <div class="col-md-2">
           <input type="text" class="form-control" #patientName="ngModel" minlength="4" maxlength="10" required [(ngModel)]="name" [ngModelOptions]="{standalone: true}"
             placeholder="Name">
-          <div *ngIf="patientName.errors && (patientName.dirty || patientName.touched)" class="alert alert-danger">
+          <div *ngIf="patientName.errors && (patientName.dirty || patientName.touched)" >
             <div [hidden]="!patientName.errors.required">
               Please enter valid patient name...
             </div>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-md-2">
-          <select class="form-control" [(ngModel)]="day" name="day">
+          <select class="form-control" [(ngModel)]="day" name="day" placeholder="day">
             <option value="">Day</option>
             <option value="01">1</option>
             <option value="02">2</option>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="col-md-2">
-          <select class="form-control" name="month" [(ngModel)]="month">
+          <select class="form-control" name="month" [(ngModel)]="month" placeholder="month">
             <option value="">Month</option>
             <option value="01">January</option>
             <option value="02">February</option>
@@ -77,12 +77,12 @@
         </div>
 
         <div class="col-md-2">
-          <input type="text" #pyear="ngModel" minlength="4" maxlength="4" required class="form-control" name="pyear" [(ngModel)]="year"
+          <input type="text" #pyear="ngModel" minlength="4" maxlength="4" required class="form-control" name="pyear" placeholder="birth year" [(ngModel)]="year"
             ngModel>
         </div>
 
         <div class="col-md-2">
-          <select class="form-control" [(ngModel)]="gender" name="gender">
+          <select class="form-control" [(ngModel)]="gender" name="gender" placeholder="Gender">
             <option value="">Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
